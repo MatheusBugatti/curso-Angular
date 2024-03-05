@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-template-binding',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './template-binding.component.html',
   styleUrl: './template-binding.component.scss'
 })

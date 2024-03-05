@@ -35,3 +35,15 @@
 <hr />
 
 <h3>Two-way binding</h3>
+<input [(ngModel)]="name" />
+{{name}}
+
+<hr />
+
+<h3>Diretivas de Atributos</h3>
+<div [ngClass]="{ 'background-red': true}">Classes condicionais.</div>
+
+<div [ngStyle]="{
+    color: age > 25 ? 'green' : 'red',
+    'font-size': age > 34 ? '10px' : '20px',
+}">Estilo dinâmico.</div>

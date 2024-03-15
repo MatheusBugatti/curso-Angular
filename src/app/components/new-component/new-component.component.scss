@@ -8,11 +8,11 @@
   Você pode definir estilos específicos para o componente raiz,
   por exemplo, alterando a cor de fundo ou a borda do componente.
 */
-    // :host{
-    //     h2{
-    //         background-color: rgb(0, 255, 13);
-    //     }
-    // }
+    :host{
+        h2{
+            background-color: rgb(0, 255, 13);
+        }
+    }
 /*
   :host-context() ele é um seletor que permite aplicar estilos
   com base no contexto do componente pai.

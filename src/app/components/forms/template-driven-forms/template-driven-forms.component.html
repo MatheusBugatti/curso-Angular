@@ -1,2 +1,156 @@
 
 <h2>Template-drivern froms</h2>
+<form #form="ngForm" (ngSubmit)="submitForm(form)">
+    <label>
+        Nome:
+        <input 
+        type="text" 
+        name="inputName" 
+        #name="ngModel"
+        [ngModel]="name.value"
+        required
+        
+        />
+        </label>
+
+        <hr>
+        <p>value: {{name.value}}</p>
+        
+        <!-- tem algo no formulario -->
+        <p>valid: {{name.valid}}</p>
+
+        <!-- ja "sujei o form" -->
+        <p>dirty: {{name.dirty}}</p>
+
+        <!-- formulario ja foi tocado -->
+        <p>touched: {{name.touched}}</p>
+        <hr>
+
+
+        <label>
+            Feminino:
+            <input 
+            type="RADIO" 
+            value="Feminino"
+            name="radioSexo" 
+            #sexo="ngModel"
+            [ngModel]="sexo.value"
+            required
+            
+            />
+            </label>
+
+        <label>
+            Masculino:
+            <input 
+            type="RADIO" 
+            value="Masculino"
+            name="radioSexo" 
+            #sexo="ngModel"
+            [ngModel]="sexo.value"
+            required
+            
+            />
+            </label>
+
+        <label>
+            Outros:
+            <input 
+            type="RADIO" 
+            value="Outros"
+            name="radioSexo" 
+            #sexo="ngModel"
+            [ngModel]="sexo.value"
+            required
+            
+            />
+            </label>
+    
+            <hr>
+            <p>value: {{sexo.value}}</p>
+            
+            <!-- tem algo no formulario -->
+            <p>valid: {{sexo.valid}}</p>
+    
+            <!-- ja "sujei o form" -->
+            <p>dirty: {{sexo.dirty}}</p>
+    
+            <!-- formulario ja foi tocado -->
+            <p>touched: {{sexo.touched}}</p>
+            <hr>
+        
+
+        <label>
+            Angular:
+            <input 
+            type="checkbox" 
+            value="Angular"
+            name="checkboxAngular" 
+            #techAngular="ngModel"
+            [ngModel]="techAngular.value"
+            required
+            
+            />
+            </label>
+    
+            <hr>
+            <p>value: {{techAngular.value}}</p>
+            
+            <!-- tem algo no formulario -->
+            <p>valid: {{techAngular.valid}}</p>
+    
+            <!-- ja "sujei o form" -->
+            <p>dirty: {{techAngular.dirty}}</p>
+    
+            <!-- formulario ja foi tocado -->
+            <p>touched: {{techAngular.touched}}</p>
+            <hr>
+
+        <label>
+            Vue:
+            <input 
+            type="checkbox" 
+            value="Vue"
+            name="checkboxVue" 
+            #techVue="ngModel"
+            [ngModel]="techVue.value"
+            required
+            
+            />
+            </label>
+    
+            <hr>
+            <p>value: {{techVue.value}}</p>
+            
+            <!-- tem algo no formulario -->
+            <p>valid: {{techVue.valid}}</p>
+    
+            <!-- ja "sujei o form" -->
+            <p>dirty: {{techVue.dirty}}</p>
+    
+            <!-- formulario ja foi tocado -->
+            <p>touched: {{techVue.touched}}</p>
+            <hr>
+
+        <select name="selectComidas" #comidas="ngModel" ngModel>     
+            <option value="">Selecione um alimento</option>
+            @for (item of listaComidas(); track item) {
+            <option [ngValue]="item">{{ item.comida }}</option>
+            }
+        </select>
+
+        <hr/>
+        <p>value:{{ comidas.value | json }}</p>
+        <p>Comida: {{ comidas.value?.comida }}</p>
+        <p>Preço: {{ comidas.value?.preco }}</p>
+        <p>valid:{{ comidas.valid }}</p>
+        <p>dirty:{{ comidas.dirty }}</p>
+        <p>touched:{{ comidas.touched }}</p>
+        <hr/>
+
+        <button [disabled]="!form.valid"> send</button>
+
+</form>
+
+
+{{form.valid}}

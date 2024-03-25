@@ -11,6 +11,8 @@ import { TemplateDeferrableViewsComponent } from './components/template/template
 import { SignalsComponentComponent } from './components/signals-component/signals.component.component';
 import { PaiOuMaeComponent } from "./components/comunicacao-entre-components/pai-ou-mae/pai-ou-mae.component";
 import { AngularPipesComponent } from "./components/pipes/angular-pipes/angular-pipes.component";
+import { ReactiveFormsComponent } from './components/forms/reactive-forms/reactive-forms.component';
+import { TemplateDrivenFormsComponent } from './components/forms/template-driven-forms/template-driven-forms.component';
 
 @Component({
     selector: 'app-root',
@@ -18,7 +20,9 @@ import { AngularPipesComponent } from "./components/pipes/angular-pipes/angular-
     template: `
 
   <h1>Curso de Angular</h1>
-  <app-angular-pipes/>
+  <app-reactive-forms></app-reactive-forms>
+  
+  
 
   `,
     imports: [
@@ -31,16 +35,18 @@ import { AngularPipesComponent } from "./components/pipes/angular-pipes/angular-
         TemplateControlFlowComponent,
         SignalsComponentComponent,
         PaiOuMaeComponent,
-        AngularPipesComponent
-    ]
+        AngularPipesComponent,
+        ReactiveFormsComponent,
+        TemplateDrivenFormsComponent
+      ]
 })
-export class AppComponent {
-  title = 'meu-primeiro-projeto-latest';
-}
+export class AppComponent {}
 
 //<app-pai-ou-mae></app-pai-ou-mae
-//   <app-signals-component></app-signals-component>
-// <app-new-component></app-new-component>
+//<app-signals-component></app-signals-component>
+//<app-new-component></app-new-component>
 //<app-template-deferrable-views></app-template-deferrable-views>
-// <app-template-control-flow></app-template-control-flow>
-/* <router-outlet></router-outlet> */
+//<app-template-control-flow></app-template-control-flow>
+//<router-outlet></router-outlet>
+//<app-angular-pipes/>
+// <app-template-driven-forms></app-template-driven-forms>

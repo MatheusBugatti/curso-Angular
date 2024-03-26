@@ -20,7 +20,7 @@ import { TemplateDrivenFormsComponent } from './components/forms/template-driven
     template: `
 
   <h1>Curso de Angular</h1>
-  <app-reactive-forms></app-reactive-forms>
+
   
   
 
@@ -49,4 +49,5 @@ export class AppComponent {}
 //<app-template-control-flow></app-template-control-flow>
 //<router-outlet></router-outlet>
 //<app-angular-pipes/>
-// <app-template-driven-forms></app-template-driven-forms>
+//<app-template-driven-forms></app-template-driven-forms>
+//<app-reactive-forms></app-reactive-forms>
